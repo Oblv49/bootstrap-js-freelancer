@@ -18,7 +18,7 @@
     <!--fa-icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -60,14 +60,15 @@
     </header>
 
     <main class="bg-dark rowProfilePattern">
-        
+
         <!--Foto profilo con nome e professione-->
         <div class="row">
             <div class="col-12 mt-4 mb-5 text-center">
                 <img class="w-25 rounded-circle animate__animated animate__zoomInDown"
                     src="https://i.imgur.com/ub2ubbX.png" alt="img profilo">
                 <p class="fs-1 fw-bold mb-0 text-white animate__animated animate__zoomInDown">Davide Minutoli</p>
-                <p class="fs-6 mt-0 textGreen animate__animated animate__zoomInDown">WEB DEVELOPER & GRAPHIC DESIGNER</p>
+                <p class="fs-6 mt-0 textGreen animate__animated animate__zoomInDown">WEB DEVELOPER & GRAPHIC DESIGNER
+                </p>
             </div>
         </div>
 
@@ -84,7 +85,7 @@
 
             <!--PRIMA RIGA-->
             <div class="row mb-5 w-75 m-auto p-0">
-                
+
                 <!--CARD 1-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -96,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--CARD 2-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -108,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--CARD 3-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -120,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--CARD 4-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -132,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--CARD 5-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -144,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!--CARD 6-->
                 <div class="col-12 col-md-6 col-lg-4 text-center animate__animated animate__bounceIn">
                     <div class="card mb-3 border border-0">
@@ -169,7 +170,7 @@
             <p class="fs-1 text-center mt-4 mb-2 text-white">WANT AN OFFER?</p>
 
             <form class="row g-3 w-75 m-auto mt-0 text-white" onsubmit="submitForm(event)">
-            
+
                 <div class="col-12 col-md-6">
                     <label for="inputFirstName" class="form-label">First Name</label>
                     <input type="text" class="form-control" id="inputFirstName" placeholder="Enter your first name...">
@@ -191,16 +192,17 @@
                     <label for="workRequest" class="form-label">Work Request</label>
                     <select id="workRequest" class="form-select">
                         <option selected>Select the type of work</option>
-                        <option value="Beck-End">Beck-end Developer</option>
-                        <option value="Front-End">Front-end Developer</option>
-                        <option value="Project Analisys">Project Analisys</option>
+                        <option value="Beck-End 20.50€/h">Beck-end Developer</option>
+                        <option value="Front-End 15.30€/h">Front-end Developer</option>
+                        <option value="Project Analisys 33.60€/h">Project Analisys</option>
 
                     </select>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" id="discountCodeContainer">
                     <label for="inputDiscountCode" class="form-label">Discount Code</label>
                     <input type="text" class="form-control" id="inputDiscountCode">
                 </div>
+
                 <div class="col-md-12">
                     <label for="inputMessage" class="form-label">Message</label>
                     <textarea class="form-control" placeholder="Specify your work commission..." id="floatingTextarea2"
@@ -210,17 +212,18 @@
                 <div class="col-12 text-center mt-4 mb-4">
                     <button type="submit" class="btn btn-light ml-3 mr-3">Send</button>
                 </div>
-            
+
             </form>
-            
+
             <!--contenitore preventivo-->
-            <div class="row row text-white border border-3 rounded-3 w-75 m-auto mb-5 mt-0 p-0 align-items-center d-none" id="preventiveContainer">
-                
+            <div class="row row text-white border border-3 rounded-3 w-75 m-auto mb-5 mt-0 p-0 align-items-center d-none"
+                id="preventiveContainer">
+
                 <div class="container d-flex">
-                    <h2 class="mb-1 mt-1" id="nameApplicant"></h2>
-                    <h2 class="text-success p-1" id="greenNameApplicant"></h2>   
+                    <h2 class="mb-1 mt-1" id="applicant"></h2>
+                    <h2 class="text-success p-1" id="greenNameApplicant"></h2>
                 </div>
-                    
+
                 <h3 class="mt-0" id="thanksYou"></h3>
                 <div class="col-8 fs-5">
                     <p class="border-bottom" id="yourEmail"></p>
@@ -231,17 +234,17 @@
 
                 <div class="col-4 text-center border-start mt-2 mb-2">
                     <h4>RATE</h4>
-                    <div class="border bordere rounded-3 text-success" >
+                    <div class="border bordere rounded-3 text-success">
                         <p id="typeRateContainer"></p>
                     </div>
                     <h4 class=" mb-0 p-0 mt-2">COST</h4>
                     <p class="mt-0" id="priceContainer"></p>
                 </div>
             </div>
-            
+
 
         </div>
-    
+
     </main>
 
 
