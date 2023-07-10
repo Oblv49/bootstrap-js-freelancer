@@ -24,7 +24,8 @@
 
 */
 //creation array whit discount code
-let coupons = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+let couponsArray = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+let usedCoupons = [];
 
 //listener on button for form
 function submitForm(event) {
@@ -60,9 +61,9 @@ function submitForm(event) {
         document.getElementById("yourEmail").innerHTML = "Your Email: " + emailUser;
         document.getElementById("yourHoursRequested").innerHTML = "Hours Requested for work: " + hoursRequested + "h " + "total";
         document.getElementById("typeOfWork").innerHTML = "Type Of Work Requested: " + typeWorkRequest;
-        document.getElementById("discoutCode").innerHTML = "Your Discount Code: " + discountCode;
         document.getElementById("typeRateContainer").innerHTML = typeWorkRequest;
-        cost = addCoupon(coupons, discountCode, cost);
+        cost = applyDiscountCode(couponsArray, usedCoupons, discountCode, cost, inputDiscountCode);
+        document.getElementById("discoutCode").innerHTML = "Your Discount Code: " + discountCode;
         document.getElementById("priceContainer").innerHTML = cost.toFixed(2) + "€";
 
 

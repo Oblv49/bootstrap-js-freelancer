@@ -1,4 +1,4 @@
-//this function need typo of work and hours requestd end return cost of work 
+//This function need typo of work and hours requestd end return cost of work 
 function calculateCost(workRequest, hoursRequest) {
 
     if (workRequest === "Beck-End 20.50€/h") cost = hoursRequest * 20.50;
@@ -9,25 +9,31 @@ function calculateCost(workRequest, hoursRequest) {
 }
 
 
-function addCoupon(coupons, coupon, cost) {
-
-    if (coupons.includes(coupon)) {
-        
-        cost = cost - (cost / 100 * 25);
-        
-        // Search index of coupon in the array
-        const index = coupons.indexOf(coupon);
-
-        if (index !== -1) {
-            //Remove coupon code 
-            coupons.splice(index, 1);
-        }
-    }
+//This function checks if the entered code is valid, if it has been used, and if it is invalid. It calculates the cost if the code is valid and unused.
+function applyDiscountCode(couponsArray, usedCoupon, input, cost, discountCodeContainer) {
     
-    return cost;
+    //Check if the discount code field is empty
+    if (input === "") {
+        return cost;
+    }
 
+    //Check if the code is valid
+    if (couponsArray.includes(input)) {
+        
+        //Check if the code has been used.
+        if (usedCoupon.includes(input)) {
+            discountCodeContainer.classList.add("bg-danger");
+            return cost;
+        } else {
+            //Calculate the cost with the discount applied
+            usedCoupon.push(input); 
+            discountCodeContainer.classList.add("bg-success");
+            cost = cost - (cost / 100 * 25);
+            return cost;
+        }
+    } else {
+        //Discount code is invalid
+        discountCodeContainer.classList.add("bg-danger");
+        return cost;
+    }
 }
-
-
-
-
