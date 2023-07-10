@@ -1,0 +1,239 @@
+/* UTILITY CLASS CSS*/
+
+/* borders */
+.border_green {
+    border: 1px solid green;
+}
+
+.border_violet {
+    border: 1px solid violet;
+}
+
+.border_gray {
+    border: 0.5px solid #e1e1e1;
+}
+
+
+
+/* backgrounds */
+.bg_red {
+    background-color: red;
+}
+
+.bg_dark {
+    background-color: rgb(15, 14, 23);
+}
+
+.bg_orange {
+    background-color: rgb(255, 106, 0);
+}
+
+.bg_darkGray{
+    background-color: rgb(26, 26, 26);
+}
+
+.shadow_bottom {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/* text colors */
+.text_white {
+    color: white;
+}
+
+.text_black {
+    color: black;
+}
+
+.text_red {
+    color: red;
+}
+
+
+.text_purple {
+    color: rgb(210, 14, 210)
+}
+
+.text_orange {
+    color: orange;
+}
+
+.text_lightblue {
+    color: rgb(134, 134, 255);
+}
+
+
+
+/* text */
+.text_center {
+    text-align: center;
+}
+
+.font_size_12 {
+    font-size: 12px;
+}
+
+.fw_900 {
+    font-weight: 900;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+
+.fw_400 {
+    font-weight: 400;
+}
+
+.fw_100 {
+    font-weight: 100;
+}
+
+
+
+/* heights */
+.h_500 {
+    height: 500px;
+}
+
+.h_400 {
+    height: 400px;
+}
+
+.h_100 {
+    height: 100px;
+}
+
+.h_70 {
+    height: 70px;
+}
+
+.h_60 {
+    height: 60px;
+}
+
+.h_50 {
+    height: 50px;
+}
+
+.h_30 {
+    height: 30px;
+}
+
+/* width */
+
+.w_100 {
+    width: 100%;
+}
+
+
+/* paddings */
+.p_10 {
+    padding: 10px;
+}
+
+
+
+/* margins */
+.mt_20 {
+    margin-top: 20px;
+}
+
+.mt_50 {
+    margin-top: 50px;
+}
+
+.mt_100 {
+    margin-top: 100px;
+}
+
+.mb_20 {
+    margin-bottom: 20px;
+}
+
+.mb_10 {
+    margin-bottom: 10px;
+}
+
+.ml_10 {
+    margin-left: 10px;
+}
+
+.ml_5 {
+    margin-left: 5px;
+}
+
+.mr_10 {
+    margin-right: 10px;
+}
+
+.mr_5 {
+    margin-right: 5px;
+}
+
+
+.m_5 {
+    margin: 5px 0px;
+}
+
+.mb_50 {
+    margin-bottom: 50px;
+}
+
+
+/* FLEX */
+.flex {
+    display: flex;
+}
+
+.wrap_w {
+    flex-wrap: wrap;
+}
+
+.flex_space_around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex_space_evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.align_center_f {
+    align-items: center;
+}
+
+.row_gap_20 {
+    row-gap: 20px;
+}
+
+.row_gap_40 {
+    row-gap: 40px;
+}
+
+.row_gap_60 {
+    row-gap: 60px;
+}
+
+.align_items_c {
+    display: flex;
+    align-items: center;
+}
+
+.justify_c_c {
+    justify-content: center;
+}
+
+/* lists */
+
+.no_bullets {
+    list-style-type: none;
+}
+
+/* other */
+.border_rad_10 {
+    border-radius: 10px;
+}
